@@ -1,0 +1,98 @@
+[
+  {
+    "name": "TGC",
+    "description": "A powerful Python GUI tool to check user membership and recent messages in Telegram groups.",
+    "link": "https://github.com/ishantia/TGC",
+    "tags": ["Python", "SpyTool", "Telegram", "windows"]
+  },
+  {
+  "name": "WindowsCrash",
+    "description": "An DigSpark project that can open CMD with admin rights and taskkil svchost.exe(causing Windows pc to crash.)",
+    "link": "https://github.com/ishantia/WindowsCrash",
+    "tags": ["CMD", "DigiSpark", "Arduino"]
+   },
+  {
+  "name": "Pin-Cracker",
+    "description": "A DigiSpark script for brute-forcing 4 and 5digit PINs by simulating USB keyboard input.",
+    "link": "https://github.com/ishantia/Pin-Cracker",
+    "tags": ["Brut-Force", "DigiSpark", "Arduino"]
+   },
+  {
+  "name": "My Portfolio",
+    "description": "My portfolio website, which includes my projects, skills, programming languages I'm proficient in, and my contact information.",
+    "link": "https://ishantia.ir",
+    "tags": ["Website", "Portfolio"]
+   },
+  {
+  "name": "Pastafe",
+    "description": "Pastafe is a random site i make in my free time. pastafe means a pink Hyundai SantaFe for me.",
+    "link": "https://pastafe.ir",
+    "tags": ["Website", "Randome", "PASTAFE"]
+   },
+  {
+  "name": "Pakatplast",
+    "description": "PakatPlast is an Iranian manufacturer of custom-printed, 100% waterproof plastic folders and envelopes for medical, promotional, and document storage uses.",
+    "link": "https://pakatplast.com",
+    "tags": ["Website", "Company", "Pakatplast"]
+   },
+  {
+  "name": "Faoxima Telgram bot",
+    "description": "A Telegram bot for selling vpn services.",
+    "link": "https://github.com/ishantia/Faoxima",
+    "tags": ["Telegram", "Bot", "Faoxima"]
+   },
+  {
+  "name": "FlexDNS",
+    "description": "A simple DNS changer for linux.",
+    "link": "https://github.com/ishantia/FlexDNS",
+    "tags": ["DNS", "Linux", "FlexDNS"]
+   },
+  {
+  "name": "alan-chand-bot",
+    "description": "A telegram bot that gets currency price from api and send it to user in telegram.",
+    "link": "https://github.com/ishantia/alan-chand-bot",
+    "tags": ["Bot"]
+   },
+  {
+  "name": "BobCafe",
+    "description": "A online menu for BobCafe.",
+    "link": "https://bobcafe.ir",
+    "tags": ["Online menu", "HTML"]
+   },
+  {
+  "name": "cgi-bin",
+    "description": "Custome account suspended html page",
+    "link": "https://github.com/ishantia/cgi-bin",
+    "tags": ["CGI", "Web"]
+   },
+  {
+  "name": "Coming Soon Page",
+    "description": "A simple coming soon page built with HTML.",
+    "link": "https://github.com/ishantia/coming-soon-page",
+    "tags": ["Website", "HTML"]
+   },
+  {
+  "name": "device_daria_hormoz",
+    "description": "Android device tree for the Daria Bond II.",
+    "link": "https://github.com/ishantia/device_daria_hormoz",
+    "tags": ["Android", "Device Tree"]
+   },
+  {
+  "name": "device_daria_hormoz-kernel",
+    "description": "Android kernel source for the Daria Bond II",
+    "link": "https://github.com/ishantia/device_daria_hormoz-kernel",
+    "tags": ["Android", "Kernel"]
+   },
+  {
+  "name": "IP-Blocked-Page",
+    "description": "A page shown when an IP address is blocked on a url.",
+    "link": "https://github.com/ishantia/IP-Blocked-Page",
+    "tags": ["Website", "HTML"]
+   },
+  {
+  "name": "TWRP device_daria_hormoz",
+    "description": "TWRP recovery source for the Daria Bond II device.",
+    "link": "https://github.com/ishantia/twrp_device_daria_hormoz",
+    "tags": ["Android", "TWRP", "Recovery"]
+   }
+]
