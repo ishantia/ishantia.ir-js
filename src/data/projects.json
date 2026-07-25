@@ -20,8 +20,14 @@
   {
   "name": "My Portfolio",
     "description": "My portfolio website, which includes my projects, skills, programming languages I'm proficient in, and my contact information.",
-    "link": "https://ishantia.ir",
+    "link": "https://github.com/ishantia/ishantia.ir",
     "tags": ["Website", "Portfolio"]
+   },
+   {
+  "name": "My Portfolio-js",
+    "description": "My portfolio website rewrited with react, which includes my projects, skills, programming languages I'm proficient in, and my contact information.",
+    "link": "https://ishantia.ir",
+    "tags": ["Website", "Portfolio", "React"]
    },
   {
   "name": "Pastafe",
