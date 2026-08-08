@@ -18,9 +18,12 @@ export function useScrollEffects() {
       ticking = true;
       requestAnimationFrame(() => {
         const y = window.scrollY;
-        document.documentElement.style.setProperty("--parallax-y", `${y * 0.04}px`);
+        document.documentElement.style.setProperty(
+          "--parallax-y",
+          `${y * 0.04}px`,
+        );
 
-        document.querySelectorAll("[data-parallax]").forEach(element => {
+        document.querySelectorAll("[data-parallax]").forEach((element) => {
           if (prefersReducedMotion || isStackedLayout) {
             element.style.transform = "";
           } else {

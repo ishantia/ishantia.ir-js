@@ -6,9 +6,17 @@ import { useReveal } from "../hooks/useReveal.js";
  * class in the static markup. Renders `as` (default "div") with the
  * `reveal`/`reveal visible` classes toggled by IntersectionObserver.
  */
-export default function Reveal({ as: Tag = "div", className = "", children, style, ...rest }) {
+export default function Reveal({
+  as: Tag = "div",
+  className = "",
+  children,
+  style,
+  ...rest
+}) {
   const [ref, visible] = useReveal();
-  const classes = ["reveal", visible ? "visible" : "", className].filter(Boolean).join(" ");
+  const classes = ["reveal", visible ? "visible" : "", className]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <Tag ref={ref} className={classes} style={style} {...rest}>

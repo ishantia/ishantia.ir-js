@@ -14,11 +14,13 @@ const safeStorage = {
     } catch {
       /* ignore write failures (private mode, quota, etc.) */
     }
-  }
+  },
 };
 
 export function useTheme() {
-  const [theme, setTheme] = useState(() => (safeStorage.get("theme") === "light" ? "light" : "dark"));
+  const [theme, setTheme] = useState(() =>
+    safeStorage.get("theme") === "light" ? "light" : "dark",
+  );
 
   useEffect(() => {
     document.body.classList.toggle("light-theme", theme === "light");
@@ -26,7 +28,7 @@ export function useTheme() {
   }, [theme]);
 
   const toggleTheme = useCallback(() => {
-    setTheme(prev => (prev === "light" ? "dark" : "light"));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   }, []);
 
   return { theme, toggleTheme };

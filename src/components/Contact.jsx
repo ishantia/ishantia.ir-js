@@ -10,33 +10,30 @@ export default function Contact() {
   const [fields, setFields] = useState(INITIAL_FIELDS);
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
-  const handleChange = useCallback(event => {
+  const handleChange = useCallback((event) => {
     const { name, value } = event.target;
-    setFields(prev => ({ ...prev, [name]: value }));
+    setFields((prev) => ({ ...prev, [name]: value }));
   }, []);
 
-  const handleSubmit = useCallback(
-    async event => {
-      event.preventDefault();
-      setStatus("sending");
+  const handleSubmit = useCallback(async (event) => {
+    event.preventDefault();
+    setStatus("sending");
 
-      const formData = new FormData(event.target);
+    const formData = new FormData(event.target);
 
-      try {
-        const response = await fetch(FORM_ACTION, {
-          method: "POST",
-          body: formData,
-          headers: { Accept: "application/json" }
-        });
-        if (!response.ok) throw new Error("Unable to send");
-        setStatus("success");
-        setFields(INITIAL_FIELDS);
-      } catch {
-        setStatus("error");
-      }
-    },
-    []
-  );
+    try {
+      const response = await fetch(FORM_ACTION, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error("Unable to send");
+      setStatus("success");
+      setFields(INITIAL_FIELDS);
+    } catch {
+      setStatus("error");
+    }
+  }, []);
 
   const isSending = status === "sending";
 
@@ -50,7 +47,8 @@ export default function Contact() {
           Have an idea, question, or project?
         </Reveal>
         <Reveal as="p" className="section-copy">
-          Send a message or reach out directly through email, GitHub, or Telegram.
+          Send a message or reach out directly through email, GitHub, or
+          Telegram.
         </Reveal>
         <div className="contact-layout">
           <Reveal as="div" className="contact-card">
@@ -63,7 +61,9 @@ export default function Contact() {
                 <div>
                   <h3>Email</h3>
                   <p>
-                    <a href="mailto:shantiaeslami@gmail.com">shantiaeslami@gmail.com</a>
+                    <a href="mailto:shantiaeslami@gmail.com">
+                      shantiaeslami@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -74,7 +74,11 @@ export default function Contact() {
                 <div>
                   <h3>GitHub</h3>
                   <p>
-                    <a href="https://github.com/ishantia" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://github.com/ishantia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       @ishantia
                     </a>
                   </p>
@@ -87,7 +91,11 @@ export default function Contact() {
                 <div>
                   <h3>Telegram</h3>
                   <p>
-                    <a href="https://t.me/ishantia" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://t.me/ishantia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       @ishantia
                     </a>
                   </p>
@@ -97,7 +105,13 @@ export default function Contact() {
           </Reveal>
 
           <Reveal as="div" className="form-panel">
-            <form id="contact-form" className="form-grid" action={FORM_ACTION} method="POST" onSubmit={handleSubmit}>
+            <form
+              id="contact-form"
+              className="form-grid"
+              action={FORM_ACTION}
+              method="POST"
+              onSubmit={handleSubmit}
+            >
               <div className="field">
                 <input
                   className="input"
@@ -151,9 +165,17 @@ export default function Contact() {
                 ></textarea>
                 <label htmlFor="message">Your Message</label>
               </div>
-              <Magnetic as="button" type="submit" className="button primary" id="submitButton" disabled={isSending}>
+              <Magnetic
+                as="button"
+                type="submit"
+                className="button primary"
+                id="submitButton"
+                disabled={isSending}
+              >
                 <i className="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                <span id="submit-text">{isSending ? "Sending..." : "Send Message"}</span>
+                <span id="submit-text">
+                  {isSending ? "Sending..." : "Send Message"}
+                </span>
               </Magnetic>
             </form>
             <div
@@ -164,7 +186,9 @@ export default function Contact() {
               role="alert"
               aria-live="polite"
             >
-              {status === "error" ? "Failed to send message. Please try again." : "Your message has been sent successfully!"}
+              {status === "error"
+                ? "Failed to send message. Please try again."
+                : "Your message has been sent successfully!"}
             </div>
           </Reveal>
         </div>

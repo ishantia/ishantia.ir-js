@@ -4,20 +4,20 @@ import Reveal from "./Reveal.jsx";
 const ABOUT_ITEMS = [
   {
     title: "Problem-solving and open-source",
-    body: "Student and tech enthusiast passionate about problem-solving and open-source."
+    body: "Student and tech enthusiast passionate about problem-solving and open-source.",
   },
   {
     title: "Android and creative software",
-    body: "Love playing around with Android and building creative solutions through code."
+    body: "Love playing around with Android and building creative solutions through code.",
   },
   {
     title: "Always learning",
-    body: "Curious mind, always learning."
+    body: "Curious mind, always learning.",
   },
   {
     title: "Hardware experiments",
-    body: "Built small projects with Arduino and Digispark."
-  }
+    body: "Built small projects with Arduino and Digispark.",
+  },
 ];
 
 export default function About() {
@@ -35,7 +35,10 @@ export default function About() {
             decoding="async"
           />
           <h2>Student. Developer. Builder.</h2>
-          <p>Focused on practical code, creative experiments, and steady improvement.</p>
+          <p>
+            Focused on practical code, creative experiments, and steady
+            improvement.
+          </p>
           <div className="availability">
             <span>
               Location <strong>Iran</strong>
@@ -57,7 +60,7 @@ export default function About() {
             Curiosity turned into code, tools, and experiments.
           </Reveal>
           <ul className="about-list">
-            {ABOUT_ITEMS.map(item => (
+            {ABOUT_ITEMS.map((item) => (
               <Reveal as="li" className="about-card" key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>

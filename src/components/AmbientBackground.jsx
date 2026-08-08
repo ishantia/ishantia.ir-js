@@ -20,26 +20,32 @@ export default function AmbientBackground() {
       canvas.style.width = `${window.innerWidth}px`;
       canvas.style.height = `${window.innerHeight}px`;
       ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-      particles = Array.from({ length: Math.min(72, Math.floor(window.innerWidth / 18)) }, () => ({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * 0.28,
-        vy: (Math.random() - 0.5) * 0.28,
-        r: Math.random() * 1.6 + 0.5
-      }));
+      particles = Array.from(
+        { length: Math.min(72, Math.floor(window.innerWidth / 18)) },
+        () => ({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          vx: (Math.random() - 0.5) * 0.28,
+          vy: (Math.random() - 0.5) * 0.28,
+          r: Math.random() * 1.6 + 0.5,
+        }),
+      );
     }
 
     function animateParticles() {
       const isLight = document.body.classList.contains("light-theme");
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
       ctx.fillStyle = isLight ? "rgba(17,24,39,.34)" : "rgba(244,247,251,.46)";
-      ctx.strokeStyle = isLight ? "rgba(82,244,211,.14)" : "rgba(82,244,211,.18)";
+      ctx.strokeStyle = isLight
+        ? "rgba(82,244,211,.14)"
+        : "rgba(82,244,211,.18)";
 
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         if (particle.x < 0 || particle.x > window.innerWidth) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > window.innerHeight) particle.vy *= -1;
+        if (particle.y < 0 || particle.y > window.innerHeight)
+          particle.vy *= -1;
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
@@ -47,7 +53,10 @@ export default function AmbientBackground() {
 
         for (let next = index + 1; next < particles.length; next++) {
           const other = particles[next];
-          const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
+          const distance = Math.hypot(
+            particle.x - other.x,
+            particle.y - other.y,
+          );
           if (distance < 120) {
             ctx.globalAlpha = (120 - distance) / 560;
             ctx.beginPath();

@@ -7,7 +7,12 @@ export default function BackToTop({ visible }) {
       className={`back-to-top${visible ? " show" : ""}`}
       id="backToTop"
       aria-label="Back to top"
-      onClick={() => window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" })}
+      onClick={() =>
+        window.scrollTo({
+          top: 0,
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+        })
+      }
     >
       <i className="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>

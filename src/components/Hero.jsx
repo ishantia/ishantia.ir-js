@@ -15,23 +15,37 @@ export default function Hero() {
             <span className="gradient-text">Eslami</span>
           </h1>
           <p className="hero-subtitle">
-            A curious student and developer building with <strong>Python</strong>, <strong>Java</strong>, Android,
-            Telegram APIs, and open-source tools.
+            A curious student and developer building with{" "}
+            <strong>Python</strong>, <strong>Java</strong>, Android, Telegram
+            APIs, and open-source tools.
           </p>
           <div className="hero-actions">
             <Magnetic href="#projects" className="button primary">
-              <i className="fa-solid fa-rocket" aria-hidden="true"></i> View Projects
+              <i className="fa-solid fa-rocket" aria-hidden="true"></i> View
+              Projects
             </Magnetic>
             <Magnetic href="#contact" className="button">
-              <i className="fa-solid fa-envelope" aria-hidden="true"></i> Get In Touch
+              <i className="fa-solid fa-envelope" aria-hidden="true"></i> Get In
+              Touch
             </Magnetic>
           </div>
           <div className="social-row" aria-label="Social profiles">
-            <a className="social-link" href="https://github.com/ishantia" target="_blank" rel="noopener noreferrer">
+            <a
+              className="social-link"
+              href="https://github.com/ishantia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa-brands fa-github" aria-hidden="true"></i> GitHub
             </a>
-            <a className="social-link" href="https://t.me/ishantia" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-telegram" aria-hidden="true"></i> Telegram
+            <a
+              className="social-link"
+              href="https://t.me/ishantia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-telegram" aria-hidden="true"></i>{" "}
+              Telegram
             </a>
           </div>
           <div className="metrics-strip" aria-label="Profile highlights">
@@ -74,10 +88,12 @@ export default function Hero() {
               <i className="fa-brands fa-java" aria-hidden="true"></i>Java
             </div>
             <div className="signal three">
-              <i className="fa-solid fa-mobile-screen" aria-hidden="true"></i>Android
+              <i className="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+              Android
             </div>
             <div className="signal four">
-              <i className="fa-solid fa-network-wired" aria-hidden="true"></i>API
+              <i className="fa-solid fa-network-wired" aria-hidden="true"></i>
+              API
             </div>
           </div>
           <div className="terminal">
