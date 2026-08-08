@@ -1,14 +1,12 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import AmbientBackground from "./components/AmbientBackground.jsx";
 import Header from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Skills from "./components/Skills.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import BackToTop from "./components/BackToTop.jsx";
 import { useScrollEffects } from "./hooks/useScrollEffects.js";
+import HomePage from "./pages/HomePage.jsx";
+import Resume from "./pages/Resume.jsx";
 
 export default function App() {
   const { showBackToTop } = useScrollEffects();
@@ -21,11 +19,10 @@ export default function App() {
       <AmbientBackground />
       <Header />
       <main id="main-content" tabIndex={-1}>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
       </main>
       <Footer />
       <BackToTop visible={showBackToTop} />
